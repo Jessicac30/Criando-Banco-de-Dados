@@ -16,4 +16,9 @@ No final do exercício, o aluno terá vivenciado a experiência de modelar a bas
 dados para um sistema simples, além de implementá-la, através da sintaxe SQL, na
 plataforma do SQL Server.
 
+# 2º Procedimento | Alimentando a Base
+
+Utilizar o SQL Server Management Studio para alimentar as tabelas com dados
+básicos do sistema
+
 
