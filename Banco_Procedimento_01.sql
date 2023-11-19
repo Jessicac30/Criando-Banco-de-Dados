@@ -1,7 +1,7 @@
--- Script para criação de tabelas no SQL Server 
+ï»¿-- Script para criaï¿½ï¿½o de tabelas no SQL Server 
 
 
--- Tabela de Usuários 
+-- Tabela de Usuï¿½rios 
 
 CREATE TABLE Usuarios ( 
 
@@ -15,7 +15,7 @@ CREATE TABLE Usuarios (
 
 ); 
 
-  
+
 
 -- Tabela de Produtos 
 
@@ -32,12 +32,21 @@ CREATE TABLE Produtos (
 ); 
 
   
+-- Criando sequencia 
+
+CREATE SEQUENCE Seq_idPessoa
+    START WITH 1
+    INCREMENT BY 1
+    MINVALUE 1
+    NO MAXVALUE
+    CACHE 10;
+
 
 -- Tabela de Pessoas 
 
 CREATE TABLE Pessoa ( 
 
-    idPessoa INT PRIMARY KEY IDENTITY, 
+    idPessoa INT PRIMARY KEY DEFAULT NEXT VALUE FOR Seq_idPessoa,
 
     nome VARCHAR(255) NOT NULL, 
 
@@ -55,7 +64,7 @@ CREATE TABLE Pessoa (
 
   
 
--- Tabela Pessoa Física 
+-- Tabela Pessoa Fï¿½sica 
 
 CREATE TABLE PessoaFisica ( 
 
@@ -69,7 +78,7 @@ CREATE TABLE PessoaFisica (
 
   
 
--- Tabela Pessoa Jurídica 
+-- Tabela Pessoa Jurï¿½dica 
 
 CREATE TABLE PessoaJuridica ( 
 
@@ -108,5 +117,3 @@ CREATE TABLE Movimento (
     FOREIGN KEY (Produtos_idProduto) REFERENCES Produtos (idProduto) 
 
 ); 
-
- 
